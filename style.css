@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#landing {
+  height: 100vh;
+  background: linear-gradient(135deg, #4dd0e1, #0288d1);
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
+
+#landing .hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#landing .hero p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+#landing button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: white;
+  color: #0288d1;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.form-container input, .form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.resume-template {
+  display: flex;
+  max-width: 900px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.left-section {
+  width: 35%;
+  background-color: #2f3e4e;
+  color: white;
+  padding: 20px;
+}
+
+.right-section {
+  width: 65%;
+  padding: 20px;
+}
+
+.profile-pic img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+h2, h3 {
+  margin-top: 20px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+button {
+  margin: 10px 5px;
+}
