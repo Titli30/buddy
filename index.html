@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Landing Page -->
+  <section id="landing">
+    <div class="hero">
+      <h1>Create Your Professional Resume</h1>
+      <p>Build a job-winning resume in minutes with live preview and customizable templates.</p>
+      <button id="startBtn">Start Building</button>
+    </div>
+  </section>
+
+  <!-- Resume Builder -->
+  <section id="builder" style="display: none;">
+    <div class="form-container">
+      <h2>Resume Form</h2>
+      <input type="text" id="name" placeholder="Full Name" />
+      <input type="text" id="title" placeholder="Job Title" />
+      <input type="file" id="photoInput" accept="image/*" />
+      <input type="text" id="phone" placeholder="Phone" />
+      <input type="text" id="email" placeholder="Email" />
+      <input type="text" id="address" placeholder="Address" />
+      <input type="text" id="github" placeholder="GitHub Link" />
+      <input type="text" id="guardian" placeholder="Guardian Name" />
+      <textarea id="hobbies" placeholder="Hobbies"></textarea>
+      <textarea id="skills" placeholder="Skills (comma separated)"></textarea>
+      <textarea id="languages" placeholder="Languages (comma separated)"></textarea>
+      <textarea id="profile" placeholder="Profile Summary"></textarea>
+
+      <h3>Education</h3>
+      <div id="educationFields"></div>
+      <button onclick="addEducation()">Add Education</button>
+
+      <h3>Experience</h3>
+      <div id="experienceFields"></div>
+      <button onclick="addExperience()">Add Experience</button>
+
+      <br><br>
+      <button onclick="generateResume()">Generate Resume</button>
+    </div>
+
+    <div id="preview" class="resume-template">
+      <div class="left-section">
+        <div class="profile-pic">
+          <img id="previewImage" alt="Profile Picture" />
+        </div>
+        <h2 id="previewName">Your Name</h2>
+        <p id="previewTitle">Software Engineer</p>
+        <h3>Contact Details</h3>
+        <p id="previewPhone"></p>
+        <p id="previewEmail"></p>
+        <p id="previewAddress"></p>
+        <h3>Skills</h3>
+        <ul id="previewSkills"></ul>
+        <h3>Languages</h3>
+        <ul id="previewLanguages"></ul>
+        <h3>Guardian</h3>
+        <p id="previewGuardian"></p>
+        <h3>Hobbies</h3>
+        <p id="previewHobbies"></p>
+        <h3>GitHub</h3>
+        <p id="previewGitHub"></p>
+      </div>
+      <div class="right-section">
+        <h2>Profile</h2>
+        <p id="previewProfile"></p>
+        <h2>Work Experience</h2>
+        <div id="previewExperience"></div>
+        <h2>Education</h2>
+        <div id="previewEducation"></div>
+      </div>
+    </div>
+
+    <button onclick="downloadPDF()">Download PDF</button>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
